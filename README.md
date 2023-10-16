@@ -1,10 +1,12 @@
 # EXCEL_COMPANY_PHONE
+
+
 Let's analyze the profit that a Company Phone has through Excel. I edited this DB by adding new columns either taking them from other DataBases or creating them from zero.
 
 This is a DB which consists of Clients info (ID,Nombre completo, Fecha de nacimiento, Dirección, Localidad y Código postal, Teléfono,
 Correo electrónico, Fecha de alta, Grupo de clientes. This is going to be what I called "Raw Data" in my project since I find it appropiate to add more columns in order to make a more exhaustive analysis.
 
-Now, I'm gonna explain all the steps I took to complete the DB.
+Now, I'm going to explain all the steps I took to complete the DB.
 
 1) Creating new columns:
    
@@ -41,13 +43,43 @@ Now, I'm gonna explain all the steps I took to complete the DB.
          associating them with the new column --> ALEATORIO().
    
 
-3) Cleaning DATA:
+2) Cleaning DATA:
    
    2.1) Remove Duplicates.
    
-   2.2) Find and Replace ambiguous Data.
+   2.2) Find and Replace Data.
    
    2.3) Create new categories to simplify the Data.
+
+
+3) Pivot Table.
+
+   3.1) Once, I do have the DataBase ready, I inserted a few pivot tables to organize the information; I'm going to dispay in a Dashboard later.
+   
+   3.2) I created an area chart to display the profit by brand (Apple, Samsung, Xiaomi, etc...)
+   
+   3.3) A pie chart to display the total profit by country.
+   
+   3.4) A bar chart to display the profit by entry date.
+   
+   3.5) A line chart to display the total benefit per month.
+   
+   3.6) Finally, to complete the information I inserted three slicers (País, Clientes, Pedidos).
+
+
+4) Dashboard:
+
+   4.1) The last step is to display all the information the company needs in order to increase its efficiency.
+   
+   4.2.) I chose a combination of a dark blue and yellow to stand out the most important information from the graphs.
+
+I'll split the project into four parts: Raw Data, Working Sheet, Pivot Table, and Dashboard.
+   
+
+
+   
+
+
    
 
 
