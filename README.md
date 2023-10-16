@@ -14,26 +14,41 @@ Now, I'm gonna explain all the steps I took to complete the DB.
    
    1.3) País --> =SI(O(E2="Madrid"; E2="Barcelona"); "España"; SI(O(E2="Londres"; E2="Liverpool"); "Inglaterra"; SI(O(E2="París"; E2="Marsella"); "Francia"; 
         SI(E2="Varsovia"; "Polonia"; SI(E2="Berlín"; "Alemania"))))).
+   
    1.4) Año Alta --> =AÑO(G2), the column G2 is Fecha de Alta.
+   
    1.5) Added Precio Venta Producto from another DB.
+   
    1.6) Precio Proveedor --> =I2*0,4, what I did here is to add the former price the company gets the products from the supplier by taking into account the company 
         gets a 40% tota income.
+   
    1.7) Beneficio --> =I2-J2; Precio Venta producto, Precio Proveedor. This is the real profit I get taking into account all the costs; it's not the income, which 
         is the benefit I would get if I just calculated the amount by which my products are sold.
+   
    1.8) Grupo Clientes, I modified this column by addinf thre new categories: Golden , Silver and Bronze. And how did I established this? by keeping in mind the 
         entry date of my clients so, --> =SI(H2<=2009;"Golden";SI(Y(H2>=2010;H2<=2015);"Silver";SI(H2>=2016;"Bronze"))).
+   
    1.9) I added Fecha Pedido, Id Pedido, and Fecha Envío from another DB.
-   1.10) I extracted the month from the Fecha de Envío column --> =TEXTO(O2;"MMMM")
-   1.11) Período de Espera --> = O2-M2 (Fecha Envio - Fecha Pedido)
+   
+   1.10) I extracted the month from the Fecha de Envío column --> =TEXTO(O2;"MMMM").
+   
+   1.11) Período de Espera --> = O2-M2 (Fecha Envio - Fecha Pedido).
+   
    1.12) Prioridad Pedido --> =SI(Q2<=5;"Máxima";SI(Q2<=20;"Normal";"Baja")); so, depending on the time the client receives their order, there is a type of order 
          (Baja , Normal, Máxima).
+   
    1.13) Producto y Marca "=IZQUIERDA(S2;ENCONTRAR(" "; S2) - 1)". I created the column Productos by creating another column with random numbers and then 
          associating them with the new column --> ALEATORIO().
+   
 
 3) Cleaning DATA:
+   
    2.1) Remove Duplicates.
+   
    2.2) Find and Replace ambiguous Data.
+   
    2.3) Create new categories to simplify the Data.
+   
 
 
    
