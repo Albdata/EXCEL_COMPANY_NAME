@@ -7,8 +7,11 @@ Correo electrónico, Fecha de alta, Grupo de clientes. This is going to be what 
 Now, I'm gonna explain all the steps I took to complete the DB.
 
 1) Creating new columns:
+   
    1.1) Edad --> =SIFECHA(C2;HOY();"y"), the column C2 is "Fecha de nacimiento".
+   
    1.2) Ciudad --> Madrid, Barcelona, Varsovia, París, Marsella, Berlín, Liverpool, and Londres.
+   
    1.3) País --> =SI(O(E2="Madrid"; E2="Barcelona"); "España"; SI(O(E2="Londres"; E2="Liverpool"); "Inglaterra"; SI(O(E2="París"; E2="Marsella"); "Francia"; 
         SI(E2="Varsovia"; "Polonia"; SI(E2="Berlín"; "Alemania"))))).
    1.4) Año Alta --> =AÑO(G2), the column G2 is Fecha de Alta.
@@ -27,7 +30,7 @@ Now, I'm gonna explain all the steps I took to complete the DB.
    1.13) Producto y Marca "=IZQUIERDA(S2;ENCONTRAR(" "; S2) - 1)". I created the column Productos by creating another column with random numbers and then 
          associating them with the new column --> ALEATORIO().
 
-2) Cleaning DATA:
+3) Cleaning DATA:
    2.1) Remove Duplicates.
    2.2) Find and Replace ambiguous Data.
    2.3) Create new categories to simplify the Data.
