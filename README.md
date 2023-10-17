@@ -27,7 +27,7 @@ Now, I'm going to explain all the steps I took to complete the DB.
    1.7) Beneficio --> =I2-J2; Precio Venta producto, Precio Proveedor. This is the real profit I get taking into account all the costs; it's not the income, which 
         is the benefit I would get if I just calculated the amount by which my products are sold.
    
-   1.8) Grupo Clientes, I modified this column by addinf thre new categories: Golden , Silver and Bronze. And how did I established this? by keeping in mind the 
+   1.8) Grupo Clientes, I modified this column by adding three new categories: Golden , Silver and Bronze. And how did I establish this? by keeping in mind the 
         entry date of my clients so, --> =SI(H2<=2009;"Golden";SI(Y(H2>=2010;H2<=2015);"Silver";SI(H2>=2016;"Bronze"))).
    
    1.9) I added Fecha Pedido, Id Pedido, and Fecha Envío from another DB.
